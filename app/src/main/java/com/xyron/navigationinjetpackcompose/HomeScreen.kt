@@ -23,7 +23,12 @@ fun HomeScreen(
         contentAlignment = Alignment.Center) {
         Text(
             modifier = Modifier.clickable {
-                  navController.navigate(route = Screen.Detail.route)
+                  navController.navigate(
+                      route = Screen.Detail.passNameAndId(
+                      id = 23,
+                      name = "Tayyab"
+                      )
+                  )
             },
             text = "Hello",
             color = MaterialTheme.colorScheme.primary,
